@@ -7,8 +7,8 @@ PCFILE = libtomlc99.pc
 
 CFLAGS = -std=c99 -Wall -Wextra -fpic
 LIB_VERSION = 1.0
-LIB = libtoml.a
-LIB_SHARED = libtoml.so.$(LIB_VERSION)
+LIB = libtomlc99.a
+LIB_SHARED = libtomlc99.so.$(LIB_VERSION)
 
 # to compile for debug: make DEBUG=1
 # to compile for no debug: make
@@ -23,10 +23,10 @@ all: $(LIB) $(LIB_SHARED) $(EXEC)
 
 *.o: $(HFILES)
 
-libtoml.a: toml.o
+libtomlc99.a: toml.o
 	ar -rcs $@ $^
 
-libtoml.so.$(LIB_VERSION): toml.o
+libtomlc99.so.$(LIB_VERSION): toml.o
 	$(CC) -shared -o $@ $^
 
 $(EXEC): $(LIB)

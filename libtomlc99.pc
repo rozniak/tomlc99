@@ -7,5 +7,5 @@ Name: libtoml
 URL: https://github.com/cktan/tomlc99/
 Description: TOML C library in c99.
 Version: v1.0
-Libs: -L${libdir} -ltoml
+Libs: -L${libdir} -ltomlc99
 Cflags: -I${includedir}
